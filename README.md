@@ -16,6 +16,21 @@ This repository includes the following:
 
         pip install -r requirements.txt
 
+## How to run the REST API application
+
+The REST API is run by running the following file:
+
+    fibonacci/api/fibonacci_api.py
+
+This will make the REST API available at the following endpoint:
+    
+    http://127.0.0.1:5000/ 
+    
+The Fibonacci function provided on the REST API can be called using the following endpoint. The parameter specifies the number of items in the Fibonacci series to return
+
+    http://127.0.0.1:5000/fibonacci/5    
+    
+
 ## How to run the tests
 
 ####To run the unit tests
