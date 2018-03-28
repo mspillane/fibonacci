@@ -35,3 +35,4 @@ This repository includes the following:
 ## Future
 ### Further improvements
 Use a cache to store values already calculated rather than re-calculating them.
+Use pytest parametrization in unit test to give more test coverage and test corner cases.
