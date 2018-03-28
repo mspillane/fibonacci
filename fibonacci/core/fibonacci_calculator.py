@@ -1,12 +1,9 @@
 import logging
 from itertools import islice
 
-
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-# logger.setLevel(logging.DEBUG)
 
-# TODO Check the type and value of the number passed in.
 
 def fib(a=0, b=1):
     """
@@ -22,6 +19,13 @@ def fib(a=0, b=1):
 
 
 def get_fibonacci_numbers(quantity):
+    """
+    Get a list of fibonacci numbers. The size of the list is governed by the quantity parameter passed to this function.
+
+    :param quantity:
+    :return: A list composed of fibonacci numbers. The size of the list is governed by the quantity parameter
+             passed in.
+    """
     logger.info('Get fibonacci numbers %s', quantity)
     # Use ValueError rather than assert function because it can be disabled and bypassed
     if not isinstance(quantity, (int)):
