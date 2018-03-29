@@ -1,4 +1,6 @@
 import logging
+
+from functools import lru_cache
 from itertools import islice
 
 logging.basicConfig(level=logging.INFO)
@@ -17,7 +19,7 @@ def fib(a=0, b=1):
         yield b
         a, b = b, a + b
 
-
+@lru_cache(maxsize=4)
 def get_fibonacci_numbers(quantity):
     """
     Get a list of fibonacci numbers. The size of the list is governed by the quantity parameter passed to this function.
@@ -39,5 +41,15 @@ def get_fibonacci_numbers(quantity):
 
 if __name__ == '__main__':
     logger.info('Running fibonacci calculator')
+
     fib_numbers = get_fibonacci_numbers(10)
     print(fib_numbers)
+    print(get_fibonacci_numbers.cache_info())
+
+    fib_numbers = get_fibonacci_numbers(10)
+    print(fib_numbers)
+    print(get_fibonacci_numbers.cache_info())
+
+    fib_numbers = get_fibonacci_numbers(5)
+    print(fib_numbers)
+    print(get_fibonacci_numbers.cache_info())
