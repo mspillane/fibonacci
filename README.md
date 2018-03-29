@@ -49,5 +49,5 @@ The Fibonacci function provided on the REST API can be called using the followin
 
 ## Future
 ### Further improvements
-Use a cache to store values already calculated rather than re-calculating them.
-Use pytest parametrization in unit test to give more test coverage and test corner cases.
+* Use a cache to store values already calculated rather than re-calculating them. (NOW IMPLEMENTED)
+* Use pytest parametrization in unit test to give more test coverage and test corner cases. (NOW IMPLEMENTED)
