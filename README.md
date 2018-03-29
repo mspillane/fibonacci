@@ -33,17 +33,17 @@ The Fibonacci function provided on the REST API can be called using the followin
 
 ## How to run the tests
 
-####To run the unit tests
+#### To run the unit tests
 
     pytest tests/test_fibonacci.py
 
-####To run the integration tests 
+#### To run the integration tests 
 
 **Note**: The integration tests require the REST API application to be running and serving requests in order for these tests to pass.
 
     pytest tests/integration/test_fibonacci_functions.py
 
-####To run **ALL** the tests (unit tests + integration tests)
+#### To run **ALL** the tests (unit tests + integration tests)
 
     pytest
 
